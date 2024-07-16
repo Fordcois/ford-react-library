@@ -1,7 +1,7 @@
 const Banner = () => {
     return (
         <div className="BannerContainer">
-            <span className="Logo">REACT LIBRARY</span>
+            <a href="/" className="Logo">REACT LIBRARY</a>
             <div>
                 <a href="https://github.com/Fordcois" className="BannerLink">Github</a>
                 <a href="https://www.samueljford.com/" className="BannerLink">Website</a>

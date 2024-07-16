@@ -1,21 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 :root {
-  --Pink: #ef9380;
-  --Blue: #51bbcf;
+  --White: #FAF9F6;
+  --Primary: #ef9380;
+  --Secondary: #51bbcf;
   --MainFont: "Oswald", sans-serif;
-  --Shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
+  --Shadow: rgba(149, 157, 165, 0.25) 0px 8px 24px;
   --FontColour: #142c31;
+  --DefaultPadding: 0px 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: rgb(146, 145, 145)
 }
 /* Banner */
 .Logo{
   font-family: var(--MainFont);
-  color: var(--Pink);
+  color: var(--Primary);
   font-size: 1.5rem;
+  text-decoration: none;
 }
 .BannerContainer {
+  background-color: var(--White);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: var(--DefaultPadding)
 }
 .BannerLink, .BannerLink:visited {
   text-decoration: none;
@@ -23,5 +37,48 @@
   padding: 5px 5px;
 }
 .BannerLink:hover {
-  text-decoration: 2px solid underline var(--Pink)
+  text-decoration: 2px solid underline var(--Primary)
+}
+.ProjectBanner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--Secondary);
+  padding: var(--DefaultPadding);
+  box-shadow: var(--Shadow);
+}
+
+.ProjectBannerTitle {
+  color: var(--White);
+  text-transform: uppercase;
+  font-family: var(--MainFont);
+}
+
+.ProjectBanner a {
+  color: var(--White);
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--MainFont);
+}
+.ProjectBanner a:hover {
+  color: var(--Primary)
+}
+
+.InstructionsBanner{
+background-color: var(--Primary);
+text-align: left;
+color: var(--White);
+padding: var(--DefaultPadding);
+box-shadow: var(--Shadow);
+}
+
+.ComponentWindow {
+  background-color: var(--White);
+  border: 2px solid var(--Primary);
+  margin: 1% 1%;
+  min-height: 80vh;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: var(--Shadow);
 }

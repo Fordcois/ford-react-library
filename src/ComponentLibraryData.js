@@ -3,18 +3,21 @@ import TrialOne from "./components/trialone";
 const ComponentLibraryData = [
     {
       name: 'NewComponent',
-      exportname:'yo',
       url: '/TrialComp',
       description: 'Just A simple Comp',
-      usedin: ['BoozersWeepers'],
+      instructions: 'So here is an example of a simple text string',
       component: TrialOne,
+      ProjectsUsedIn: [
+        {projectName:'BoozersWeepers',projectURL:'https://github.com/Fordcois/BoozersWeepers'},
+        {projectName:'Crown Cryptic',projectURL:'https://github.com/Fordcois/crown-cryptic'}
+                      ]
     },
     {
       name: 'SecondComponent',
-      exportname:'tirla',
       url: '/Maybe',
       description: 'Just A simple Comp',
-      usedin: ['BoozersWeepers'],
+      instructions: 'Here are instructions for using the component',
+      ProjectsUsedIn: [{projectName:'BoozersWeepers',projectURL:'https://github.com/Fordcois/BoozersWeepers'}],
       component:TrialOne,
     }
   ];

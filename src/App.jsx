@@ -1,19 +1,18 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route,Navigate } from "react-router-dom";
 import ComponentLibraryData from "./ComponentLibraryData";
 import Homepage from "./Pages";
 import ViewComponentPage from "./Pages/compviewpage";
 
 const App = () => {
 
-  const RoutesFromJSON = ComponentLibraryData.map((component, index) => (
-    <Route
-    key={index}
-    path={component.url}
-    element={<ViewComponentPage passedComponent={<component.component/>} />}
-  />
+const RoutesFromJSON = ComponentLibraryData.map((LibraryEntry, index) => (
+  <Route key={index} 
+  path={LibraryEntry.url} 
+  element={<ViewComponentPage 
+    passedComponent={<LibraryEntry.component/>} 
+    instructions={LibraryEntry.instructions} 
+    projectsUsedIn={LibraryEntry.ProjectsUsedIn}/>}/>
   ));
-
-
 
 
   return (
@@ -21,7 +20,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Homepage/>} />
         {RoutesFromJSON}
-        <Route path="*" element={'No Page Found'} />
+        <Route path="*"  element={<Navigate to='/'/>} />
+
       </Routes>
     </BrowserRouter>
   );
