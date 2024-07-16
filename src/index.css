@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+:root {
+  --Pink: #ef9380;
+  --Blue: #51bbcf;
+  --MainFont: "Oswald", sans-serif;
+  --Shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
+  --FontColour: #142c31;
+}
+/* Banner */
+.Logo{
+  font-family: var(--MainFont);
+  color: var(--Pink);
+  font-size: 1.5rem;
+}
+.BannerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.BannerLink, .BannerLink:visited {
+  text-decoration: none;
+  color: var(--FontColour);
+  padding: 5px 5px;
+}
+.BannerLink:hover {
+  text-decoration: 2px solid underline var(--Pink)
+}
