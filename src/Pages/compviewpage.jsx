@@ -9,8 +9,6 @@ const linkedUsedInProjects = projectsUsedIn?.map((project, index) => (
     </a>
     ));
 
-
-  
   return (
     <div>
       <Banner />

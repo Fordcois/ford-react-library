@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap');
+
 :root {
   --White: #FAF9F6;
-  --Primary: #ef9380;
-  --Secondary: #51bbcf;
-  --MainFont: "Oswald", sans-serif;
-  --Shadow: rgba(149, 157, 165, 0.25) 0px 8px 24px;
+  --Primary: #E85F5C;
+  --Secondary: #282A3E;
+  --MainFont: "Josefin Sans", sans-serif;
+  --Shadow: rgba(0,0,0,.05) -10px 10px 5px;
+  --ShadowTwo: rgba(149, 157, 165, 0.25) 0px 8px 24px;
   --FontColour: #142c31;
   --DefaultPadding: 0px 5px;
 }
@@ -14,26 +16,39 @@
   padding: 0;
 }
 
+.JesefinWeight{
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
 body{
-  background-color: rgb(146, 145, 145)
+  background-color: var(--White)
+}
+/* DIVS For displaying Content */
+.GLOBAL-center{
+  margin: auto;
+  width: 100%;
+  text-align: center;
 }
 /* Banner */
 .Logo{
   font-family: var(--MainFont);
   color: var(--Primary);
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-decoration: none;
 }
 .BannerContainer {
   background-color: var(--White);
+  font-family: var(--MainFont);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: var(--DefaultPadding)
 }
 .BannerLink, .BannerLink:visited {
+  font-size: 1.25rem;
   text-decoration: none;
-  color: var(--FontColour);
+  text-transform: uppercase;
+  color: var(--Secondary);
   padding: 5px 5px;
 }
 .BannerLink:hover {
@@ -45,7 +60,6 @@ body{
   align-items: center;
   background-color: var(--Secondary);
   padding: var(--DefaultPadding);
-  box-shadow: var(--Shadow);
 }
 
 .ProjectBannerTitle {
@@ -70,15 +84,15 @@ background-color: var(--Primary);
 text-align: left;
 color: var(--White);
 padding: var(--DefaultPadding);
-box-shadow: var(--Shadow);
+white-space: pre-line;
 }
 
 .ComponentWindow {
   background-color: var(--White);
-  border: 2px solid var(--Primary);
-  margin: 1% 1%;
+  margin: 2% 2%;
   min-height: 80vh;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 0px 5px 5px 0px;
   box-shadow: var(--Shadow);
+  border-left: 4px solid var(--Primary);
 }
