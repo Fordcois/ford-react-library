@@ -1,54 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 :root {
---Lighest: #90a955;
---HighlightColour:#4f772d;
---MidColour:#31572c;
---DarkColour:#132a13;
---Font: "Oswald", sans-serif;
+    --Lighest: #90a955;
+    --HighlightColour: #4f772d;
+    --MidColour: #31572c;
+    --DarkColour: #132a13;
+    --Font: "Oswald", sans-serif;
 }
-
-
 
 .ShareButton-container {
     position: relative;
     display: inline-block;
-    cursor: pointer;
-  }
-  
-  .ShareButton {
+}
+.ShareButton {
     padding: 10px 20px;
     background-color: var(--MidColour);
     font-size: 16px;
     font-family: var(--Font);
     text-transform: uppercase;
+    border-radius: 10px;
+    color: white;
     cursor: pointer;
     width: 150px;
     border: none;
-  }
-    .ShareButton {
-    padding: 10px 20px;
-    background-color: var(--MidColour);
-    font-size: 16px;
-    font-family: var(--Font);
-    text-transform: uppercase;
-    cursor: pointer;
-    width: 150px;
-    border: none;
-  }
-  
-  .ShareButtonNotClickable {
-    cursor: not-allowed;
-  }
-  
-  .tooltiptext {
+}
+
+.ShareButton:hover {
+    background-color: var(--DarkColour);
+    color: white;
+}
+
+.tooltip {
     visibility: hidden;
     opacity: 0;
-    width: 120px;
-    background-color: black;
-    color: #fff;
+    width: 110px;
+    font-family: var(--Font);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    background-color: var(--DarkColour);
+    color: white;
     text-align: center;
     border-radius: 6px;
-    padding: 5px;
+    padding: 0px 5px;
     position: absolute;
     z-index: 1;
     bottom: 125%; /* Position the tooltip above the button */
@@ -56,11 +48,10 @@
     margin-left: -60px;
     transform: translateY(10px); /* Start slightly below */
     transition: opacity 0.3s, transform 0.3s ease-in-out; /* Smooth transition */
-  }
-  
-  .tooltiptext.show {
+}
+
+.tooltip.show {
     visibility: visible;
     opacity: 1;
     transform: translateY(0); /* Move up to its original position */
-  }
-
+}

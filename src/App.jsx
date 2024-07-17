@@ -11,7 +11,9 @@ const RoutesFromJSON = ComponentLibraryData.map((LibraryEntry, index) => (
   element={<ViewComponentPage 
     passedComponent={<LibraryEntry.component/>} 
     instructions={LibraryEntry.instructions} 
-    projectsUsedIn={LibraryEntry.ProjectsUsedIn}/>}/>
+    projectsUsedIn={LibraryEntry.ProjectsUsedIn}
+    codeLink={LibraryEntry.GithubLink}
+    CSSLink={LibraryEntry.CSSLink}/>}/>
   ));
 
 

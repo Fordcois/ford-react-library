@@ -6,9 +6,8 @@
   --Secondary: #282A3E;
   --MainFont: "Josefin Sans", sans-serif;
   --Shadow: rgba(0,0,0,.05) -10px 10px 5px;
-  --ShadowTwo: rgba(149, 157, 165, 0.25) 0px 8px 24px;
   --FontColour: #142c31;
-  --DefaultPadding: 0px 5px;
+  --DefaultPadding: 1px 10px;
 }
 
 * {
@@ -20,9 +19,11 @@
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
 }
+
 body{
   background-color: var(--White)
 }
+
 /* DIVS For displaying Content */
 .GLOBAL-center{
   margin: auto;
@@ -30,6 +31,11 @@ body{
   text-align: center;
 }
 /* Banner */
+
+.HeaderContrainer{
+  display:flex;
+  flex-direction:column;
+}
 .Logo{
   font-family: var(--MainFont);
   color: var(--Primary);
@@ -42,14 +48,16 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--DefaultPadding)
+  padding: var(--DefaultPadding);
+  margin: auto;
 }
 .BannerLink, .BannerLink:visited {
   font-size: 1.25rem;
   text-decoration: none;
   text-transform: uppercase;
   color: var(--Secondary);
-  padding: 5px 5px;
+  padding: 0px 5px 0px 5px;
+  margin: auto;
 }
 .BannerLink:hover {
   text-decoration: 2px solid underline var(--Primary)
@@ -80,17 +88,18 @@ body{
 }
 
 .InstructionsBanner{
-background-color: var(--Primary);
-text-align: left;
-color: var(--White);
-padding: var(--DefaultPadding);
-white-space: pre-line;
+  background-color: var(--Primary);
+  text-align: justify;
+  font-size: smaller;
+  color: var(--White);
+  padding: 10px;
+  white-space: pre-line;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .ComponentWindow {
   background-color: var(--White);
   margin: 2% 2%;
-  min-height: 80vh;
   padding: 20px;
   border-radius: 0px 5px 5px 0px;
   box-shadow: var(--Shadow);

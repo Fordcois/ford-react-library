@@ -5,26 +5,29 @@ const ShareButton = () => {
 
 const [isClickable, setIsClickable] = useState(true);
 
-const shareContent = () => 
-    {
-    console.log("Content is Shared");
-    setIsClickable(false);
-    setTimeout(() => {setIsClickable(true);}, 1000)
-    };
+const ShareFunction = () => {
+    if (navigator.share){
+        navigator.share({
+        Text:'Samuel Ford - Full Stack Developer',
+        url:'https://www.samueljford.com/',
+        title:'Samuel Ford - Full Stack Developer'})
+        }
+    else{
+        setIsClickable(false);
+        navigator.clipboard.writeText('Samuel Ford - Full Stack Developer https://www.samueljford.com/')
+        setTimeout(() => {setIsClickable(true);}, 1000)
+        }
+        };
 
 return (
 <div className="GLOBAL-center">
     <div className="ShareButton-container">
-        <button
-        className={`ShareButton ${!isClickable ? "NotClickable" : ""}`}
-        onClick={shareContent}
-        disabled={!isClickable}
-        >
-            {isClickable ? "Share" : "Content Copied"}
+        <button className={`ShareButton ${!isClickable ? "NotClickable" : ""}`} onClick={ShareFunction} disabled={!isClickable} >
+            Share
         </button>
 
-        <span className={`tooltiptext ${!isClickable ? "show" : ""}`}>
-            Content Copied!
+        <span className={`tooltip ${!isClickable ? "show" : ""}`}>
+            Copied to Clipboard
         </span>
     </div>
 </div>
