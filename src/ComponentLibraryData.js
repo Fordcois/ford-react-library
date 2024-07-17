@@ -36,7 +36,6 @@ const ComponentLibraryData = [
       url: '/Maybe',
       description: 'Just A simple Comp',
       instructions: 'Here are instructions for using the component',
-      ProjectsUsedIn: [{projectName:'BoozersWeepers',projectURL:'https://github.com/Fordcois/BoozersWeepers'}],
       component:ShareButton,
     }
   ];

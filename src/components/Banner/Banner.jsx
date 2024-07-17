@@ -1,7 +1,8 @@
+// eslint-disable-next-line react/prop-types
 const Banner = ({codeLink,CSSLink,linkedUsedInProjects,instructions}) => {
 
     const HomePageMode = !codeLink && !CSSLink && !linkedUsedInProjects && !instructions;
-    
+    //TODO Refactor according to DRY Principles
     return (
         HomePageMode ? (
             <div className="HeaderContainer">
@@ -31,11 +32,11 @@ const Banner = ({codeLink,CSSLink,linkedUsedInProjects,instructions}) => {
                 </div>
             </div>
             <div className='ProjectBanner'>
-                <span className="ProjectBannerTitle">Projects</span>
-                <span>{linkedUsedInProjects}</span>
+                <span className="ProjectBannerTitle">{linkedUsedInProjects? 'Projects': ''}&nbsp;</span>
+                <span>{linkedUsedInProjects? linkedUsedInProjects: ''}</span>
             </div>
             <div className='InstructionsBanner'>
-                {instructions}
+                {instructions? instructions:''}&nbsp;
             </div>
         </div>
         )
