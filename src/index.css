@@ -8,6 +8,7 @@
   --Shadow: rgba(0,0,0,.05) -10px 10px 5px;
   --FontColour: #142c31;
   --DefaultPadding: 1px 10px;
+  --TextFont: 'Inter', sans-serif;
 }
 
 * {
@@ -21,7 +22,8 @@
 }
 
 body{
-  background-color: var(--White)
+  background-color: var(--White);
+  font-family: var(--TextFont);
 }
 
 /* DIVS For displaying Content */

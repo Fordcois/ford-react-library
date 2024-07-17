@@ -1,4 +1,5 @@
 import Banner from "../components/Banner/Banner";
+import '@fontsource/inter';
 import ComponentLibraryData from "../ComponentLibraryData";
 
 const Homepage = () => {
