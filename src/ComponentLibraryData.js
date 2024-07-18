@@ -16,18 +16,17 @@
 
 import ShareButton from "./components/shareButton";
 
-const ComponentLibraryData = [
+export const ComponentLibraryData = [
     {
       name: 'Share Button',
       url: '/share',
       description: 'This component is designed to be attached to a website to share a message. On Mobile Devices (and supported browsers) clicking the button will bring up a share context menu, on Desktop devices Clicking the button will copy the message to your clipboard.',
-      instructions: "When you click the button, a share menu appears (on mobile and some desktop browsers) with a URL. If unavailable, the message 'Samuel Ford - Full Stack Developer https://www.samueljford.com/' will be copied to the clipboard.",
+      instructions: "When you click the button, a share menu appears (on mobile and some desktop browsers) with a URL. If unavailable, the message and url defined in the code will be copied to the clipboard. \n This code uses the React-Icons Library which will need to be installed and imported into your project.",
       component: ShareButton,
       GithubLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/shareButton.jsx',
       CSSLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/stylesheets/shareButton.css',
       ProjectsUsedIn: [
-        {projectName:'BoozersWeepers',projectURL:'https://github.com/Fordcois/BoozersWeepers'},
-        {projectName:'Crown Cryptic',projectURL:'https://github.com/Fordcois/crown-cryptic'}
+        {projectName:'Portfolio',projectURL:'https://github.com/Fordcois/Portfolio'}
                       ],
       Tags:['Share','CSS']
     },
@@ -40,4 +39,5 @@ const ComponentLibraryData = [
     }
   ];
   
-  export default ComponentLibraryData;
+export const numberOfComponents = ComponentLibraryData.length
+export default ComponentLibraryData;

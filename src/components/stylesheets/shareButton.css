@@ -55,3 +55,20 @@
     opacity: 1;
     transform: translateY(0); /* Move up to its original position */
 }
+
+.Socials-container{
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-family: var(--Font);
+    color: var(--MidColour);
+}
+.Sharing-Icons{
+    color: var(--MidColour);
+    font-size: 1.75rem;
+    padding:5px;
+    
+}
+.Sharing-Icons:hover{
+    color: var(--DarkColour);
+}
+

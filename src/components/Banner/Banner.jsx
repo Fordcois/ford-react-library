@@ -1,3 +1,4 @@
+import { numberOfComponents } from "../../ComponentLibraryData";
 // eslint-disable-next-line react/prop-types
 const Banner = ({codeLink,CSSLink,linkedUsedInProjects,instructions}) => {
 
@@ -17,8 +18,8 @@ const Banner = ({codeLink,CSSLink,linkedUsedInProjects,instructions}) => {
                     <span className="ProjectBannerTitle">&nbsp;</span>
 
                 </div>
-                <div className='InstructionsBanner'>
-                &nbsp;
+                <div className='InstructionsBanner' style={{textAlign:'right'}}>
+                {`${numberOfComponents} Components loaded`}
                 </div>
             </div>
         ) : 
@@ -36,7 +37,7 @@ const Banner = ({codeLink,CSSLink,linkedUsedInProjects,instructions}) => {
                 <span>{linkedUsedInProjects? linkedUsedInProjects: ''}</span>
             </div>
             <div className='InstructionsBanner'>
-                {instructions? instructions:''}&nbsp;
+                {instructions? instructions: 'Look at code for further instructions'};
             </div>
         </div>
         )
