@@ -9,6 +9,7 @@ const RoutesFromJSON = ComponentLibraryData.map((LibraryEntry, index) => (
   <Route key={index} 
   path={LibraryEntry.url} 
   element={<ViewComponentPage 
+    ComponentName={LibraryEntry.name}
     passedComponent={<LibraryEntry.component/>} 
     instructions={LibraryEntry.instructions} 
     projectsUsedIn={LibraryEntry.ProjectsUsedIn}

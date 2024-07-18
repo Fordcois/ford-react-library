@@ -1,8 +1,8 @@
 import { numberOfComponents } from "../../ComponentLibraryData";
 // eslint-disable-next-line react/prop-types
-const Banner = ({codeLink,CSSLink,linkedUsedInProjects,instructions}) => {
+const Banner = ({ComponentName,codeLink,CSSLink,linkedUsedInProjects,instructions}) => {
 
-    const HomePageMode = !codeLink && !CSSLink && !linkedUsedInProjects && !instructions;
+    const HomePageMode = !codeLink && !CSSLink && !linkedUsedInProjects && !instructions && !ComponentName;
     //TODO Refactor according to DRY Principles
     return (
         HomePageMode ? (
@@ -33,8 +33,8 @@ const Banner = ({codeLink,CSSLink,linkedUsedInProjects,instructions}) => {
                 </div>
             </div>
             <div className='ProjectBanner'>
-                <span className="ProjectBannerTitle">{linkedUsedInProjects? 'Projects': ''}&nbsp;</span>
-                <span>{linkedUsedInProjects? linkedUsedInProjects: ''}</span>
+                <span className="ProjectBannerTitle">{ComponentName? ComponentName: ''}&nbsp;</span>
+                <span>{linkedUsedInProjects ? linkedUsedInProjects: ''}</span>
             </div>
             <div className='InstructionsBanner'>
                 {instructions? instructions: 'Look at code for further instructions'};
