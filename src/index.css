@@ -107,3 +107,41 @@ body{
   box-shadow: var(--Shadow);
   border-left: 4px solid var(--Primary);
 }
+
+.Homepage-Container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Component Card */
+.Component-card-container{
+  width: 350px;
+  padding: 10px;
+}
+.Component-card-container .Header{
+background-color: var(--Secondary);
+padding: 5px;
+border-radius: 15px 15px 0px 0px;
+border-left: 4px solid var(--Primary);
+}
+.Component-card-container .Header:hover{
+  background-color: var(--Primary);
+
+}
+.Component-card-container .Description{
+  background-color: var(--White);
+  padding: 5px 10px;
+  font-size: .8rem;
+  text-align: justify;
+  background-color: var(--White);
+  border-radius:0px 0px 15px 15px;
+  box-shadow: var(--Shadow);
+  border-left: 4px solid var(--Primary);
+  }
+.Component-card-container .title{
+  font-family: var(--MainFont);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--White)
+}

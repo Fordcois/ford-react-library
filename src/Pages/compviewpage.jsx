@@ -1,17 +1,11 @@
-import Banner from "../components/Banner/Banner";
+import Banner from "../components/SiteComponents/Banner";
 
 // eslint-disable-next-line react/prop-types
-const ViewComponentPage = ({ ComponentName,passedComponent, instructions, projectsUsedIn,codeLink,CSSLink }) => {
-// eslint-disable-next-line 
-const linkedUsedInProjects = projectsUsedIn?.map((project, index) => (
-    <a key={index} href={project.projectURL} target="_blank" rel="noopener noreferrer">
-      {project.projectName}
-    </a>
-    ));
+const ViewComponentPage = ({ ComponentName,passedComponent, instructions,codeLink,CSSLink }) => {
 
   return (
     <div>
-      <Banner ComponentName={ComponentName} codeLink={codeLink} CSSLink={CSSLink} linkedUsedInProjects={linkedUsedInProjects} instructions={instructions}/>
+      <Banner ComponentName={ComponentName} codeLink={codeLink} CSSLink={CSSLink} instructions={instructions}/>
       <div className="ComponentWindow"> 
         {passedComponent}
       </div>

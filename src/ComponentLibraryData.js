@@ -7,10 +7,6 @@
 //   component: DirectImport,
 //   GithubLink: Link to Components Code,
 //   CSSLink: Link to Componenets CSS,
-//   ProjectsUsedIn: [
-//     {projectName:'Project 1',projectURL:'https://github.com/Fordcois/Project1'},
-//     {projectName:'Project 2',projectURL:'https://github.com/Fordcois/Project2'}
-//                   ],
 //   Tags:['Search','Tags']
 // }
 
@@ -25,9 +21,6 @@ export const ComponentLibraryData = [
       component: ShareButton,
       GithubLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/shareButton.jsx',
       CSSLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/stylesheets/shareButton.css',
-      ProjectsUsedIn: [
-        {projectName:'Portfolio',projectURL:'https://github.com/Fordcois/Portfolio'}
-                      ],
       Tags:['SHARE','CSS','SOCIALS']
     },
     {
