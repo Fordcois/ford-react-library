@@ -11,7 +11,7 @@ const Homepage = () => {
       name={component.name}
       description={component.description}
       url={component.url}
-      tags={component.tags} 
+      tags={component.Tags} 
     />
   ));
 

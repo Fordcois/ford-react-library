@@ -29,6 +29,7 @@ export const ComponentLibraryData = [
       description: 'Just A simple Comp',
       instructions: 'Here are instructions for using the component',
       component:ShareButton,
+      Tags:['SHARE','CSS','SOCIALS']
     }
   ];
   

@@ -36,7 +36,7 @@ const Banner = ({ComponentName,codeLink,CSSLink,instructions}) => {
                 <span className="ProjectBannerTitle">{ComponentName? ComponentName: ''}&nbsp;</span>
             </div>
             <div className='InstructionsBanner'>
-                {instructions? instructions: 'Look at code for further instructions'};
+                {instructions? instructions: 'Look at code for further instructions'}
             </div>
         </div>
         )

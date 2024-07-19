@@ -6,7 +6,6 @@
   --Secondary: #282A3E;
   --MainFont: "Josefin Sans", sans-serif;
   --Shadow: rgba(0,0,0,.05) -10px 10px 5px;
-  --FontColour: #142c31;
   --DefaultPadding: 1px 10px;
   --TextFont: 'Inter', sans-serif;
 }
@@ -118,30 +117,67 @@ body{
   width: 350px;
   padding: 10px;
 }
-.Component-card-container .Header{
-background-color: var(--Secondary);
-padding: 5px;
-border-radius: 15px 15px 0px 0px;
-border-left: 4px solid var(--Primary);
-}
-.Component-card-container .Header:hover{
-  background-color: var(--Primary);
-
-}
-.Component-card-container .Description{
-  background-color: var(--White);
-  padding: 5px 10px;
-  font-size: .8rem;
-  text-align: justify;
-  background-color: var(--White);
-  border-radius:0px 0px 15px 15px;
-  box-shadow: var(--Shadow);
-  border-left: 4px solid var(--Primary);
-  }
-.Component-card-container .title{
-  font-family: var(--MainFont);
-  font-size: 1.25rem;
-  text-transform: uppercase;
+.Component-card-container a {
   text-decoration: none;
-  color: var(--White)
+  color: inherit; /* To ensure it inherits the color and doesn't appear as a default link color */
 }
+
+.Component-card{
+  background-color: var(--White);
+  box-shadow: rgba(0, 0, 0, .2) 0px 0px 5px;
+  border-radius: 15px;
+}
+.Component-card:hover{
+  background-color: var(--White);
+  box-shadow: rgba(0, 0, 0, .4) 0px 0px 5px;
+}
+
+.Component-card .Header{
+background-color: var(--Secondary);
+border-radius: 15px 15px 0px 0px;
+padding: 5px 10px;
+font-family: var(--MainFont);
+text-transform: uppercase;
+color: var(--White);
+font-size: 1.25rem;
+display: flex;
+justify-content: space-between;
+}
+.Component-card:hover .Header{
+  color: var(--Primary);
+
+  }
+
+.Component-card .Stripe{
+  background-color: var(--Primary);
+  padding: 2px 10px;
+  }
+.Component-card .Description{
+  color: var(--Secondary);
+  font-size: 0.75rem; 
+  text-align: justify;
+  padding: 10px;
+    }
+  .Component-card .Tags{
+    padding: 2px 10px;
+    text-align: right;
+  }
+.Component-card .Tags .single-tag{
+  color: var(--Primary);
+  font-family: var(--MainFont);
+  font-size: .75rem;
+  padding: 2px;
+}
+.Component-card .Tags .single-tag:hover{
+  color: var(--Secondary);
+  font-family: var(--MainFont);
+  font-size: .75rem;
+  padding: 2px;
+}
+
+
+
+
+
+/* TODO - Make heavier box shadow on select
+//Change Title Maybe? */
