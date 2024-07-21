@@ -11,6 +11,7 @@
 // }
 
 import ShareButton from "./components/shareButton";
+import LanguageSwitch from "./components/LanguageSwitch";
 
 export const ComponentLibraryData = [
     {
@@ -24,12 +25,14 @@ export const ComponentLibraryData = [
       Tags:['SHARE','CSS','SOCIALS']
     },
     {
-      name: 'SecondComponent',
-      url: '/Maybe',
-      description: 'Just A simple Comp',
-      instructions: 'Here are instructions for using the component',
-      component:ShareButton,
-      Tags:['SHARE','CSS','SOCIALS']
+      name: 'Switch Language',
+      url: '/languageswitch',
+      description: 'A simple method for switching languages for content on a single page. This approach allows the creator to write content in multiple languages and lets users switch between them seamlessly, while maintaining a readable codebase and avoiding the need to create multiple pages.',
+      instructions: 'Languages are controlled via an object at the top of the code, and the displayed text is dynamically updated based on the current language state. Buttons allow users to easily switch between different languages, thereby changing the displayed text according to the selected language.',
+      component:LanguageSwitch,
+      GithubLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/LanguageSwitch.jsx',
+      CSSLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/stylesheets/LanguageSwitch.css',
+      Tags:['LANGUAGE','ACCESSIBILITY']
     }
   ];
   

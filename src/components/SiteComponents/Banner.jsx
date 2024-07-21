@@ -4,6 +4,7 @@ const Banner = ({ComponentName,codeLink,CSSLink,instructions}) => {
 
     const HomePageMode = !codeLink && !CSSLink && !instructions && !ComponentName;
     //TODO Refactor according to DRY Principles
+    // TODO remove link if no CSS
     return (
         HomePageMode ? (
             <div className="HeaderContainer">

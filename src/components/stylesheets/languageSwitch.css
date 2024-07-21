@@ -1,0 +1,17 @@
+:root {
+    --LangPrimary: #282A3E;
+  }
+
+.Language-selection-bar{
+    text-align: right;
+    font-size: 3rem;
+}
+
+.title {
+    color: #0f4c5c;
+}
+.paragraph{
+    color: #333533;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
