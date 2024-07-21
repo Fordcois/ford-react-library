@@ -10,9 +10,11 @@
   --TextFont: 'Inter', sans-serif;
 }
 
-* {
+html, body {
   margin: 0;
   padding: 0;
+  background-color: var(--White);
+  font-family: var(--TextFont);
 }
 
 .JesefinWeight{
@@ -20,9 +22,10 @@
   font-weight: 400;
 }
 
-body{
-  background-color: var(--White);
-  font-family: var(--TextFont);
+.Pages-container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* DIVS For displaying Content */
@@ -176,9 +179,59 @@ justify-content: space-between;
   padding: 2px;
 }
 
+/* Footer */
+.FooterContainer{
+  background-color: var(--Secondary);
+  margin-top: auto;
+  position: relative;
+  width: 100%;
+}
+.FooterContainer .Cutout{
+  background-color: var(--White);
+  text-align: center;
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  z-index: 1;
+  border-radius: 0px 0px 10px 10px;
+}
+.FooterContainer .Footer{
+  background-color: var(--Secondary);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  color: var(--White);
+  font-size: 0.9rem;
+  }
+
+
+  .MailIcon {
+    color: var(--Primary);
+    font-size: 1.25rem;
+  }
+  
+  .EmailMeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+
+  .EmailLink {
+    text-decoration: none; 
+    color: inherit;
+    display: flex; 
+    align-items: center; 
+  }
+  .EmailLink:hover { 
+    display: flex; 
+    align-items: center; 
+    border-bottom: 2px solid var(--Primary)
+  }
 
 
 
-
-/* TODO - Make heavier box shadow on select
-//Change Title Maybe? */
