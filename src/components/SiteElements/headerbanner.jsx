@@ -1,6 +1,6 @@
 import { numberOfComponents } from "../../ComponentLibraryData";
 // eslint-disable-next-line react/prop-types
-const Banner = ({ComponentName,codeLink,CSSLink,instructions}) => {
+const HeaderBanner = ({ComponentName,codeLink,CSSLink,instructions}) => {
 
     const HomePageMode = !codeLink && !CSSLink && !instructions && !ComponentName;
     //TODO Refactor according to DRY Principles
@@ -44,4 +44,4 @@ const Banner = ({ComponentName,codeLink,CSSLink,instructions}) => {
     );
 };
 
-export default Banner;
+export default HeaderBanner;

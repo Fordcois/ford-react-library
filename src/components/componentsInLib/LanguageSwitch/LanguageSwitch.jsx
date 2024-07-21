@@ -1,5 +1,5 @@
-import "../components/stylesheets/languageSwitch.css";
 import { useState } from "react";
+import './languageSwitch.css'
 
 const LanguageSwitch = () => {
     const [language, setLanguage] = useState('ENG');

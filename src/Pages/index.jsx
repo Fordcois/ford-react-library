@@ -1,7 +1,7 @@
 import '@fontsource/inter';
-import Banner from "../components/SiteComponents/Banner";
-import ComponentCard from '../components/SiteComponents/ComponentCard';
+import ComponentCard from '../components/SiteElements/ComponentCard';
 import ComponentLibraryData from "../ComponentLibraryData";
+import HeaderBanner from '../components/SiteElements/headerbanner';
 
 const Homepage = () => {
   const Components = ComponentLibraryData.map((component, index) => (
@@ -17,7 +17,7 @@ const Homepage = () => {
 
   return (
     <div>
-      <Banner />
+      <HeaderBanner />
       <div className='Homepage-Container'>
         {Components}
       </div>

@@ -1,7 +1,7 @@
-import "../components/stylesheets/shareButton.css";
 import { useState } from "react";
 import { FaFacebookSquare, FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import './shareButton.css'
 
 
 const ShareButton = () => {
