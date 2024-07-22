@@ -21,12 +21,6 @@ import DirectImport from LOCATION
   "component": DirectImport,
   "GithubLink": "Link to Components Code",
   "CSSLink": "Link to Components CSS",
-  "ProjectsUsedIn": [
-    {
-      "projectName": "Project 1",
-      "projectURL": "https://github.com/Fordcois/Project1"
-    }
-  ],
   "Tags": ["Search", "Tags"]
 }
 ```
