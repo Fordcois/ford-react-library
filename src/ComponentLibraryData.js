@@ -12,6 +12,7 @@
 
 import ShareButton from "./components/componentsInLib/ShareButton/shareButton";
 import LanguageSwitch from "./components/componentsInLib/LanguageSwitch/LanguageSwitch";
+import VertNavbar from "./components/componentsInLib/vertNavBar/vertNavBar";
 
 export const ComponentLibraryData = [
     {
@@ -33,6 +34,16 @@ export const ComponentLibraryData = [
       GithubLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/LanguageSwitch/LanguageSwitch.jsx',
       CSSLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/LanguageSwitch/languageSwitch.css',
       Tags:['LANGUAGE','ACCESSIBILITY']
+    },
+    {
+      name: 'Vertical Navigation Bar',
+      url: '/vertNavBar',
+      description: 'A vertical navigation bar that floats above other content on the page. It can be hidden, showing just icons, or it can be expanded to give full descriptions. When expanded, information on the page is shifted so it is not obscured.',
+      instructions: '-',
+      component:VertNavbar,
+      GithubLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/vertNavBar/vertNavBar.jsx',
+      CSSLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/vertNavBar/vertNavBar.css',
+      Tags:['NAVIGATION']
     }
   ];
   
