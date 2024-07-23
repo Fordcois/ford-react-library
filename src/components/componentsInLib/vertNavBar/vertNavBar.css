@@ -2,9 +2,10 @@
 
 .VertNavbar {
     position: fixed; 
-    top: 0;
+    /* top: 0;  - Unhighlight this to have the Navbar start from the top */
     left: -150px; /* Adjust as Needed */
-    height: 100%;
+    bottom: 0; /* Adjust as Needed */
+    height: 80%; /* Adjust as Needed */
     width: 200px;
      z-index: 999;
     background-image: linear-gradient(to bottom, #cd561b, #9f4112);

@@ -39,7 +39,7 @@ export const ComponentLibraryData = [
       name: 'Vertical Navigation Bar',
       url: '/vertNavBar',
       description: 'A vertical navigation bar that floats above other content on the page. It can be hidden, showing just icons, or it can be expanded to give full descriptions. When expanded, information on the page is shifted so it is not obscured.',
-      instructions: '-',
+      instructions: 'Adjust the CSS Top,Bottom, and Height values to position navigation bar as needed',
       component:VertNavbar,
       GithubLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/vertNavBar/vertNavBar.jsx',
       CSSLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/vertNavBar/vertNavBar.css',
