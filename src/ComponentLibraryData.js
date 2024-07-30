@@ -13,6 +13,7 @@
 import ShareButton from "./components/componentsInLib/ShareButton/shareButton";
 import LanguageSwitch from "./components/componentsInLib/LanguageSwitch/LanguageSwitch";
 import VertNavbar from "./components/componentsInLib/vertNavBar/vertNavBar";
+import RotatingCard from "./components/componentsInLib/RotatingCard/RotatingCard";
 
 export const ComponentLibraryData = [
     {
@@ -44,6 +45,16 @@ export const ComponentLibraryData = [
       GithubLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/vertNavBar/vertNavBar.jsx',
       CSSLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/vertNavBar/vertNavBar.css',
       Tags:['NAVIGATION']
+    },
+    {
+      name: 'Rotation Card',
+      url: '/Rotatecard',
+      description: 'A CSS element that displays information and rotates 180 degrees on mouseover, like a playing card, to reveal different information on the back.',
+      instructions: 'Modify the content in the front and back styled divs. The container ensures they overlap, and the backface visibility property ensures content is visible only from one side.',
+      component:RotatingCard,
+      GithubLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/RotatingCard/RotatingCard.jsx',
+      CSSLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/RotatingCard/RotatingCard.css',
+      Tags:['CSS','UI']
     }
   ];
   

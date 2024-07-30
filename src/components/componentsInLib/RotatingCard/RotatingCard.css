@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+:root {
+    --CardPrimary: #e63946;
+    --CardSecondary: #f1faee;
+    --TitleCardFont: "Oswald", sans-serif;
+}
+.card-container{
+    width: 250px;
+    height: 320px;
+    background: none;
+}
+
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.thecard{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+}
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+.thecard:hover{
+  transform: rotateY(180deg);
+}
+
+
+
+.card-back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: var(--CardSecondary);
+  color: var(--CardPrimary);
+  transform: rotateY(180deg);
+  padding: 5px;
+  text-align: center;
+}
+
+.card-front{
+position: absolute;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 10px;
+backface-visibility: hidden;
+overflow: hidden;
+background: var(--CardPrimary);
+color:var(--CardSecondary);
+padding: 5px;
+text-align: center;
+  }
+  
+  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+  .card-back h1,.card-front h1{
+text-align: center;
+font-family: var(--TitleCardFont);
+text-transform: uppercase;
+  }
+
+
+
