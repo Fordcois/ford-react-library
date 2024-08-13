@@ -4,7 +4,7 @@ import './OnscreenKeyboard.css'
 
 const  OnscreenKeyboard= () => {
 
-const [userinput,setuserinput] = useState("Hello")
+const [userinput,setuserinput] = useState("HELLOWORLD")
 
 // The Below Code if for accepting real keyboard inputs
 const [pressedKeys,setPressedKeys] = useState({})
