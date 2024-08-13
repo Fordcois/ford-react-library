@@ -59,14 +59,14 @@ export const ComponentLibraryData = [
       Tags:['CSS','UI']
     },
     {
-      name: 'OnScreenKeyboard',
+      name: 'Onscreen Keyboard',
       url: '/onscreenkeyboard',
-      description: 'A CSS element that displays information and rotates 180 degrees on mouseover, like a playing card, to reveal different information on the back.',
-      instructions: 'Modify the content in the front and back styled divs. The container ensures they overlap, and the backface visibility property ensures content is visible only from one side.',
+      description: 'A Keyboard component that users can interact with using either the onscreen buttons or their own keyboard. This has the advantage of not triggering the keyboard to appear on mobile devices.',
+      instructions: 'Modify the Type function to interact with whatever you wish. Currently, it works with a string, but it can also be adapted to work with arrays. Additional keyboard actions can be implemented by adding more IF conditions.',
       component:OnscreenKeyboard,
-      GithubLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/RotatingCard/RotatingCard.jsx',
-      CSSLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/RotatingCard/RotatingCard.css',
-      Tags:['CSS','UI']
+      GithubLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/OSKeyboard/OnscreenKeyboard.jsxx',
+      CSSLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/OSKeyboard/OnscreenKeyboard.css',
+      Tags:['UI','INPUT','EVENT TRIGGER']
     }
 
   ];

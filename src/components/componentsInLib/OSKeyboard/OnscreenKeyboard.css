@@ -16,7 +16,9 @@
 }
 
 .text-input-area{
-    color: var(--KeyRed)
+    color: var(--KeyRed);
+    padding: 20px 20px;
+    height: 1rem;
 }
 
 
