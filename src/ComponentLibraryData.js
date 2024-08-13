@@ -14,6 +14,8 @@ import ShareButton from "./components/componentsInLib/ShareButton/shareButton";
 import LanguageSwitch from "./components/componentsInLib/LanguageSwitch/LanguageSwitch";
 import VertNavbar from "./components/componentsInLib/vertNavBar/vertNavBar";
 import RotatingCard from "./components/componentsInLib/RotatingCard/RotatingCard";
+import OnscreenKeyboard from "./components/componentsInLib/OSKeyboard/OnscreenKeyboard";
+
 
 export const ComponentLibraryData = [
     {
@@ -55,7 +57,18 @@ export const ComponentLibraryData = [
       GithubLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/RotatingCard/RotatingCard.jsx',
       CSSLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/RotatingCard/RotatingCard.css',
       Tags:['CSS','UI']
+    },
+    {
+      name: 'OnScreenKeyboard',
+      url: '/onscreenkeyboard',
+      description: 'A CSS element that displays information and rotates 180 degrees on mouseover, like a playing card, to reveal different information on the back.',
+      instructions: 'Modify the content in the front and back styled divs. The container ensures they overlap, and the backface visibility property ensures content is visible only from one side.',
+      component:OnscreenKeyboard,
+      GithubLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/RotatingCard/RotatingCard.jsx',
+      CSSLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/RotatingCard/RotatingCard.css',
+      Tags:['CSS','UI']
     }
+
   ];
   
 export const numberOfComponents = ComponentLibraryData.length

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap');
+
+
+:root {
+    --KeyPrimary: #ced4da;
+    --KeyDarker: #adb5bd;
+    --KeyFontColour: #343a40;
+    --KeyRed: #E85F5C;
+    --MainFont: "Josefin Sans", sans-serif;
+}
+
+.Title{
+    color: var(--FontColour);
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+.text-input-area{
+    color: var(--KeyRed)
+}
+
+
+
+.keyboard-Container{
+    width: fit-content;
+}
+.keyboard-row{
+    display: flex;
+    justify-content: center;
+}
+
+.KeyboardLetter{
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: var(--KeyPrimary);
+    color: var(--FontColour);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+
+.KeyboardLetter:hover, .hitkeyboardLetter{
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: var(--KeyDarker);
+    color: var(--FontColour);
+    font-weight: 700;
+    font-size: 1.1rem;
+}

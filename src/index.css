@@ -134,6 +134,7 @@ html, body {
   background-color: var(--White);
   box-shadow: rgba(0, 0, 0, .2) 0px 0px 5px;
   border-radius: 15px;
+  min-height: 150px;
 }
 .Component-card:hover{
   background-color: var(--White);
