@@ -100,6 +100,17 @@ html, body {
   white-space: pre-line;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
 }
+.InstructionsBanner-Home{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--Primary);
+  text-align: justify;
+  font-size: smaller;
+  color: var(--White);
+  padding: 10px;
+  white-space: pre-line;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
 
 .ComponentWindow {
   background-color: var(--White);
@@ -177,6 +188,7 @@ justify-content: space-between;
   font-family: var(--MainFont);
   font-size: .75rem;
   padding: 2px;
+  cursor: pointer;
 }
 .Component-card .Tags .single-tag:hover{
   color: var(--Secondary);
@@ -237,6 +249,10 @@ justify-content: space-between;
     display: flex; 
     align-items: center; 
     border-bottom: 2px solid var(--Primary)
+  }
+
+  .single-filter{
+    padding: 0px 10px;
   }
 
 

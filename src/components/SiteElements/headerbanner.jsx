@@ -1,6 +1,7 @@
+import { DiVim } from "react-icons/di";
 import { numberOfComponents } from "../../ComponentLibraryData";
 // eslint-disable-next-line react/prop-types
-const HeaderBanner = ({ComponentName,codeLink,CSSLink,instructions}) => {
+const HeaderBanner = ({ComponentName,codeLink,CSSLink,instructions,toggleInFilterList,filters}) => {
 
     const HomePageMode = !codeLink && !CSSLink && !instructions && !ComponentName;
     //TODO Refactor according to DRY Principles
@@ -19,8 +20,10 @@ const HeaderBanner = ({ComponentName,codeLink,CSSLink,instructions}) => {
                     <span className="ProjectBannerTitle">&nbsp;</span>
 
                 </div>
-                <div className='InstructionsBanner' style={{textAlign:'right'}}>
-                {`${numberOfComponents} Components loaded`}
+                <div className='InstructionsBanner-Home' style={{textAlign:'right'}}>
+                <div>{filters.map((filter, index) => 
+                    <span key={index} className="single-filter" onClick={()=>toggleInFilterList(filter)}>{filter}</span>)}</div>
+                <span>{`${numberOfComponents} Components loaded`}</span>
                 </div>
             </div>
         ) : 
