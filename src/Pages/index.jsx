@@ -6,7 +6,7 @@ import FooterBanner from '../components/SiteElements/footerbanner';
 import { useState } from 'react';
 
 const Homepage = () => {
-const [filters,setFilters] = useState(['CSS'])
+const [filters,setFilters] = useState([])
 const filteredComponents = ComponentLibraryData.filter((component) => 
   filters.every(filter => component.Tags.includes(filter))
 );
