@@ -67,6 +67,7 @@ html, body {
   text-decoration: 2px solid underline var(--Primary)
 }
 .ProjectBanner{
+  min-height: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,6 +76,7 @@ html, body {
 }
 
 .ProjectBannerTitle {
+  display: flex;
   color: var(--White);
   text-transform: uppercase;
   font-family: var(--MainFont);
@@ -256,10 +258,44 @@ justify-content: space-between;
     align-items: center; 
     border-bottom: 2px solid var(--Primary)
   }
-
-  .single-filter{
-    padding: 0px 10px;
+  .filter-title{
+    margin-right: 5px;
   }
+
+  .single-filter {
+    display: flex;
+    font-size: .85rem;
+    cursor: pointer;
+    justify-content: space-between; 
+    vertical-align: bottom;
+    border-radius: 35px;
+    padding: 2px 5px;
+    background-color: var(--White);
+    color: var(--Secondary);
+  }
+  .single-filter:hover .filter-cross {
+    transform: rotate(90deg); /* Rotate 90 degrees clockwise */
+  }
+  .single-filter:hover .filter-cross, .single-filter:hover {
+    color: var(--Primary)
+  }
+  .filter-cross{
+    font-size: .85rem;
+    color: var(--Secondary);
+    transition: transform 0.2s ease;
+  }
+  .filter-tags-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .filter-tags-container > *:not(:last-child) {
+    margin-right: 3px; 
+  }
+  .filter-name{
+    margin: 0px 5px;
+  }
+
+ 
 
   .form-field {
     position: relative;

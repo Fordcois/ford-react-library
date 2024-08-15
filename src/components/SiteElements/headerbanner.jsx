@@ -29,9 +29,17 @@ const HeaderBanner = ({ComponentName,codeLink,CSSLink,instructions,toggleInFilte
                     {/* Blue Banners */}
                     {HomePageMode? 
                             //  On The Homepage
-                            <span className="ProjectBannerTitle">
-                                &nbsp;{/* TODO - FILTERS WILL GO HERE */}
-                            </span>
+                            <div className="ProjectBannerTitle">
+                            <span className="filter-title">{filters.length===0? ' ' : 'Filters:'}</span>
+                            <div className="filter-tags-container"> 
+                            {filters.map((filter, index) => 
+                                <div key={index} className="single-filter" onClick={()=>toggleInFilterList(filter)}>
+                                    <span className="filter-name">{filter}</span>
+                                    <FaTimesCircle className="filter-cross"/>
+                                </div>)}
+                            &nbsp;
+                            </div>
+                           </div> 
                             :
                             // On The Componenet Page 
                             <span className="ProjectBannerTitle">
@@ -45,7 +53,8 @@ const HeaderBanner = ({ComponentName,codeLink,CSSLink,instructions,toggleInFilte
                             //  On The Homepage
                             
                         <div className='InstructionsBanner-Home'>
-                                <span >{numOfComponents} {numOfComponents===1? 'Component loaded' :'Components loaded'}</span>
+                                <span> {numOfComponents === 0 ? ('No components found!') : (`${numOfComponents} ${numOfComponents === 1 ? 'Component loaded' : 'Components loaded'}`)}</span>
+
                                 <div className="form-field">
                                     <input type="text" id="fname" name="fname" value={searchTerm} placeholder='Search components' onChange={(event) => setSearchTerm(event.target.value)}className="Searchbar" />
                                     <span className="icon"><FaSearch/></span>
@@ -68,6 +77,4 @@ const HeaderBanner = ({ComponentName,codeLink,CSSLink,instructions,toggleInFilte
 
 export default HeaderBanner;
 
-{/* {filters.map((filter, index) => 
-                    <span key={index} className="single-filter" onClick={()=>toggleInFilterList(filter)}>{filter}</span>)}</div>
-                <span>{`${numberOfComponents} Components loaded`}</span> */}
+{/*  */}
