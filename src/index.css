@@ -102,6 +102,7 @@ html, body {
 }
 .InstructionsBanner-Home{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: var(--Primary);
   text-align: justify;
@@ -110,6 +111,11 @@ html, body {
   padding: 10px;
   white-space: pre-line;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.instructions{
+  margin: 0px;
+  font-size: .75rem;
 }
 
 .ComponentWindow {
@@ -254,6 +260,36 @@ justify-content: space-between;
   .single-filter{
     padding: 0px 10px;
   }
+
+  .form-field {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .icon {
+    position: absolute;
+    left:5px;
+    top: 2px;
+    color: var(--Secondary);
+  }
+  .delete{
+    position: absolute;
+    right:5px;
+    top: 2px;
+    color: var(--Secondary);
+    cursor: pointer;
+  }
+  .Searchbar{
+    padding-left: 22px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 25px;
+    min-width: 300px;
+  }
+  .Searchbar:focus{
+    outline: solid 2px var(--Secondary);
+  }
+
 
 
 

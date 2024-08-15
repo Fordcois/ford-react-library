@@ -22,7 +22,7 @@ export const ComponentLibraryData = [
       name: 'Share',
       url: '/share',
       description: 'This component is designed to be attached to a website to share a message. On Mobile Devices (and supported browsers) clicking the button will bring up a share context menu, on Desktop devices Clicking the button will copy the message to your clipboard.',
-      instructions: "When you click the button, a share menu appears (on mobile and some desktop browsers) with a URL. If unavailable, the message and url defined in the code will be copied to the clipboard. \n This code uses the React-Icons Library which will need to be installed and imported into your project.",
+      instructions: "When you click the button, a share menu appears (on mobile and some desktop browsers) with a URL. If unavailable, the message and url defined in the code will be copied to the clipboard.This code uses the React-Icons Library which will need to be installed and imported into your project.",
       component: ShareButton,
       GithubLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/ShareButton/shareButton.jsx',
       CSSLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/ShareButton/shareButton.css',
@@ -70,6 +70,4 @@ export const ComponentLibraryData = [
     }
 
   ];
-  
-export const numberOfComponents = ComponentLibraryData.length
 export default ComponentLibraryData;

@@ -6,9 +6,12 @@ import FooterBanner from '../components/SiteElements/footerbanner';
 import { useState } from 'react';
 
 const Homepage = () => {
+const [searchTerm,setSearchTerm] = useState('')
 const [filters,setFilters] = useState([])
+
+
 const filteredComponents = ComponentLibraryData.filter((component) => 
-  filters.every(filter => component.Tags.includes(filter))
+  filters.every(filter => component.Tags.includes(filter)) && component.name.toUpperCase().includes(searchTerm.toUpperCase())
 );
 
 const toggleInFilterList = (filter) => {
@@ -36,7 +39,7 @@ const toggleInFilterList = (filter) => {
 
   return (
     <div className='Pages-container'>
-      <HeaderBanner toggleInFilterList={toggleInFilterList} filters={filters}/>
+      <HeaderBanner toggleInFilterList={toggleInFilterList} filters={filters} searchTerm={searchTerm} setSearchTerm={setSearchTerm} numOfComponents={filteredComponents.length}/>
       <div className='Homepage-Container'>
         {Components}
       </div>

@@ -1,50 +1,73 @@
-import { DiVim } from "react-icons/di";
-import { numberOfComponents } from "../../ComponentLibraryData";
+import { useState } from "react";
+import { FaSearch,FaTimesCircle  } from "react-icons/fa";
 // eslint-disable-next-line react/prop-types
-const HeaderBanner = ({ComponentName,codeLink,CSSLink,instructions,toggleInFilterList,filters}) => {
-
+const HeaderBanner = ({ComponentName,codeLink,CSSLink,instructions,toggleInFilterList,filters,searchTerm,setSearchTerm,numOfComponents}) => {
     const HomePageMode = !codeLink && !CSSLink && !instructions && !ComponentName;
-    //TODO Refactor according to DRY Principles
-    // TODO remove link if no CSS
     return (
-        HomePageMode ? (
             <div className="HeaderContainer">
                 <div className="BannerContainer">
                     <a href="/" className="Logo">FORD REACT</a>
                     <div>
-                        <a href="https://github.com/Fordcois" className="BannerLink" target="_blank" rel="noopener noreferrer">Github</a>
-                        <a href="https://www.samueljford.com/" className="BannerLink" target="_blank" rel="noopener noreferrer">Website</a>
+                    {/* White Banner */}
+                        {HomePageMode? 
+                            //  On The Homepage
+                            <div>
+                                <a href="https://github.com/Fordcois" className="BannerLink" target="_blank" rel="noopener noreferrer">Github</a>
+                                <a href="https://www.samueljford.com/" className="BannerLink" target="_blank" rel="noopener noreferrer">Website</a>
+                            </div>
+                            :
+                            // On The Componenet Page 
+                            <div>
+                                <a href={codeLink} className="BannerLink" target="_blank" rel="noopener noreferrer">Code</a>
+                                <a href={CSSLink} className="BannerLink" target="_blank" rel="noopener noreferrer">CSS</a>
+                            </div>
+                        }
+
                     </div>
                 </div>
                 <div className='ProjectBanner'>
-                    <span className="ProjectBannerTitle">&nbsp;</span>
+                    {/* Blue Banners */}
+                    {HomePageMode? 
+                            //  On The Homepage
+                            <span className="ProjectBannerTitle">
+                                &nbsp;{/* TODO - FILTERS WILL GO HERE */}
+                            </span>
+                            :
+                            // On The Componenet Page 
+                            <span className="ProjectBannerTitle">
+                                {ComponentName}
+                            </span>
+                        }
+                </div>
+                
+                    {/* Red Banner */}
+                    {HomePageMode? 
+                            //  On The Homepage
+                            
+                        <div className='InstructionsBanner-Home'>
+                                <span >{numOfComponents} {numOfComponents===1? 'Component loaded' :'Components loaded'}</span>
+                                <div className="form-field">
+                                    <input type="text" id="fname" name="fname" value={searchTerm} placeholder='Search components' onChange={(event) => setSearchTerm(event.target.value)}className="Searchbar" />
+                                    <span className="icon"><FaSearch/></span>
+                                    <span className="delete">{searchTerm.length>0? <FaTimesCircle onClick={()=>setSearchTerm('')}/>:''}</span>
+                                </div>
+                        </div>
+                            :
+                            // On The Componenet Page 
+                            <div className="InstructionsBanner"> 
+                            <p className="instructions">{instructions}</p>
+                            </div>
+                        }
+                    
 
-                </div>
-                <div className='InstructionsBanner-Home' style={{textAlign:'right'}}>
-                <div>{filters.map((filter, index) => 
-                    <span key={index} className="single-filter" onClick={()=>toggleInFilterList(filter)}>{filter}</span>)}</div>
-                <span>{`${numberOfComponents} Components loaded`}</span>
-                </div>
             </div>
-        ) : 
-        (
-            <div className="HeaderContainer">
-            <div className="BannerContainer">
-                <a href="/" className="Logo">FORD REACT</a>
-                <div>
-                    <a href={codeLink} className="BannerLink" target="_blank" rel="noopener noreferrer">Code</a>
-                    <a href={CSSLink} className="BannerLink" target="_blank" rel="noopener noreferrer">CSS</a>
-                </div>
-            </div>
-            <div className='ProjectBanner'>
-                <span className="ProjectBannerTitle">{ComponentName? ComponentName: ''}&nbsp;</span>
-            </div>
-            <div className='InstructionsBanner'>
-                {instructions? instructions: 'Look at code for further instructions'}
-            </div>
-        </div>
-        )
+
+        
     );
 };
 
 export default HeaderBanner;
+
+{/* {filters.map((filter, index) => 
+                    <span key={index} className="single-filter" onClick={()=>toggleInFilterList(filter)}>{filter}</span>)}</div>
+                <span>{`${numberOfComponents} Components loaded`}</span> */}
