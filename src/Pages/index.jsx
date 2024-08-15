@@ -34,6 +34,7 @@ const toggleInFilterList = (filter) => {
       url={component.url}
       tags={component.Tags}
       toggleInFilterList={toggleInFilterList}
+      filters={filters}
     />
   ));
 

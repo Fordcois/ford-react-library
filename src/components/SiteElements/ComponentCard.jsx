@@ -1,5 +1,5 @@
 import { FaCode } from "react-icons/fa";
-const ComponentCard = ({ name, description, url, tags,toggleInFilterList }) => {
+const ComponentCard = ({ name, description, url, tags,toggleInFilterList,filters }) => {
   return (
     <div className="Component-card-container">
       
@@ -17,7 +17,7 @@ const ComponentCard = ({ name, description, url, tags,toggleInFilterList }) => {
       </div>
       <div className="Tags">
         {tags.map((tag, index) => 
-          <span key={index} className="single-tag" onClick={()=>toggleInFilterList(tag)}>{tag}
+          <span key={index} className={filters.includes(tag) ? "single-tag selected" : "single-tag"} onClick={()=>toggleInFilterList(tag)}>{tag}
           {index < tags.length - 1 ? ' - ' : ''}
           </span>
           

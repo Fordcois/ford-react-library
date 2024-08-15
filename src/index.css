@@ -205,6 +205,11 @@ justify-content: space-between;
   padding: 2px;
 }
 
+.selected {
+  color: var(--Secondary) !important;
+  /* styles for selected */
+}
+
 /* Footer */
 .FooterContainer{
   background-color: var(--Secondary);
