@@ -132,6 +132,8 @@ html, body {
 .Homepage-Container{
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
+  height: 100%;
 }
 
 /* Component Card */
@@ -329,6 +331,32 @@ justify-content: space-between;
   }
   .Searchbar:focus{
     outline: solid 2px var(--Secondary);
+  }
+
+  .no-comp-found-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--Primary);
+    font-family: var(--MainFont);
+    font-size: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+    text-transform: uppercase;
+  }
+
+  .clear-filter-message{
+    color: var(--Secondary);
+    cursor: pointer;
+    text-transform: none;
+    text-decoration: 2px solid var(--Primary) underline;
+  }
+  .clear-filter-message:hover{
+    color:var(--Primary);
+    cursor: pointer;
+    text-transform: none;
+    text-decoration: 2px solid var(--Primary) underline;
   }
 
 

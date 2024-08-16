@@ -53,7 +53,7 @@ const HeaderBanner = ({ComponentName,codeLink,CSSLink,instructions,toggleInFilte
                             //  On The Homepage
                             
                         <div className='InstructionsBanner-Home'>
-                                <span> {numOfComponents === 0 ? ('No components found!') : (`${numOfComponents} ${numOfComponents === 1 ? 'Component loaded' : 'Components loaded'}`)}</span>
+                                <span> {numOfComponents === 0 ? ('') : (`${numOfComponents} ${numOfComponents === 1 ? 'Component loaded' : 'Components loaded'}`)}</span>
 
                                 <div className="form-field">
                                     <input type="text" id="fname" name="fname" value={searchTerm} placeholder='Search components' onChange={(event) => setSearchTerm(event.target.value)}className="Searchbar" />

@@ -41,6 +41,11 @@ const toggleInFilterList = (filter) => {
   return (
     <div className='Pages-container'>
       <HeaderBanner toggleInFilterList={toggleInFilterList} filters={filters} searchTerm={searchTerm} setSearchTerm={setSearchTerm} numOfComponents={filteredComponents.length}/>
+      {Components.length===0 && 
+      <div className='no-comp-found-message'>
+        No Components Found
+        <span style={{fontSize:'1rem'}}>(<span className='clear-filter-message' onClick={()=>{setSearchTerm(''),setFilters([])}}>Clear Filters</span>)</span>
+      </div>}
       <div className='Homepage-Container'>
         {Components}
       </div>
