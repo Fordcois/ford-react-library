@@ -26,6 +26,7 @@ html, body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
 }
 
 /* DIVS For displaying Content */
@@ -132,6 +133,7 @@ html, body {
 .Homepage-Container{
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   flex-grow: 1;
   height: 100%;
 }
