@@ -1,0 +1,43 @@
+
+:root {
+    --Green: rgb(123,182,119);
+    --Yellow: rgb(211,191,107);
+    --Grey:  rgb(139,143,145);
+    }
+
+.linked-icon {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .linked-icon .tooltiptext {
+    visibility: hidden;
+    background-color: var(--Green);
+    color: #fff;
+    text-align: center;
+    width: max-content;
+    border-radius: 6px;
+    font-size: .8rem;
+    padding: 5px 5px; 
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; 
+    left: 50%;
+    transform: translateX(-50%); 
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .linked-icon:hover .tooltiptext {
+    visibility: visible;
+  }
+  
+  .ReactIcon {
+    font-size: 1.5rem;
+    color: var(--Grey);
+  }
+  
+  .ReactIcon:hover {
+    color: var(--Green);
+  }

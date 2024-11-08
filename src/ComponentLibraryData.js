@@ -15,6 +15,7 @@ import LanguageSwitch from "./components/componentsInLib/LanguageSwitch/Language
 import VertNavbar from "./components/componentsInLib/vertNavBar/vertNavBar";
 import RotatingCard from "./components/componentsInLib/RotatingCard/RotatingCard";
 import OnscreenKeyboard from "./components/componentsInLib/OSKeyboard/OnscreenKeyboard";
+import Tooltips from "./components/componentsInLib/ToolTips/tooltips";
 
 
 export const ComponentLibraryData = [
@@ -27,6 +28,16 @@ export const ComponentLibraryData = [
       GithubLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/ShareButton/shareButton.jsx',
       CSSLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/ShareButton/shareButton.css',
       Tags:['SHARE','CSS','SOCIALS']
+    },
+    {
+      name: 'Tool Tips',
+      url: '/tooltips',
+      description: "A custom-styled tooltip that appears when hovering over an element. Includes options for colors, messages, and relative positioning.",
+      instructions: "To implement tooltips, wrap the target element in a container with a separate span for the tooltip message. On hover, use CSS to toggle the tooltip’s visibility to active.",
+      component: Tooltips,
+      GithubLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/ToolTips/tooltips.jsx',
+      CSSLink:'https://github.com/Fordcois/ford-react-library/blob/main/src/components/componentsInLib/ToolTips/tooltips.css',
+      Tags:['UX','CSS']
     },
     {
       name: 'Switch Language',
